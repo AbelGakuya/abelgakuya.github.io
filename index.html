@@ -72,6 +72,7 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
+            z-index: 2;
         }
 
         #learn-more-text {
@@ -79,7 +80,10 @@
             color: #58a6ff; /* Set Learn more text color to light blue */
             cursor: pointer;
             font-weight: bold;
-            display: block;
+            background-color: #121212; /* Dark background color for the "Learn more" container */
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         #arrow-icon {
@@ -122,7 +126,7 @@
 
         #social-links a {
             margin: 0 10px;
-            color: #58a6ff; /* Set link color to a light blue */
+            color: #58a6ff; /* Set link color to light blue */
             text-decoration: none;
             font-size: 20px;
         }
@@ -174,15 +178,13 @@
             <p class="special-text">Medical Doctor | Android Kotlin Programmer | Learning Python</p>
             <p>Hello! I'm Abel Gakuya, a passionate Medical Doctor with a keen interest in technology. By day, I'm dedicated to the field of medicine, working to improve healthcare and make a positive impact on people's lives. Outside the clinic, I'm a versatile programmer, specializing in Android app development using Kotlin. I'm also on an exciting journey to master Python.</p>
             <p>Join me as I explore the intersection of medicine and technology, creating innovative solutions and striving to make a difference. Let's connect and share our experiences!</p>
-            <div id="learn-more-container">
-                <div id="learn-more-text" onclick="revealSections()">Learn more about Abel Gakuya <span id="arrow-icon">&#9654;</span></div>
-            </div>
         </div>
-        
         
     </div>
 
-    
+    <div id="learn-more-container">
+        <div id="learn-more-text" onclick="revealSections()">Learn more about Abel Gakuya <span id="arrow-icon">&#9654;</span></div>
+    </div>
 
     <section id="education">
         <h2>Education</h2>
