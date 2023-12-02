@@ -23,6 +23,12 @@
             object-fit: cover;
         }
 
+        #scroll-container {
+            max-height: calc(100vh - 60px); /* Adjusted for bottom navigation */
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
         #profile-container {
             display: flex;
             flex-direction: column;
@@ -69,11 +75,6 @@
         #learn-more-container {
             text-align: center;
             margin-top: 20px;
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
         }
 
         #learn-more-text {
@@ -130,13 +131,6 @@
             color: #58a6ff; /* Set link color to light blue */
             text-decoration: none;
             font-size: 20px;
-        }
-
-        /* Add new container for scrolling */
-        #scroll-container {
-            max-height: calc(100vh - 60px); /* Adjusted for bottom navigation */
-            overflow-y: auto;
-            overflow-x: hidden;
         }
 
         /* Media queries for responsive design */
