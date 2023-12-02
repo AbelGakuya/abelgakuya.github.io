@@ -94,18 +94,35 @@
             margin-left: 5px;
         }
 
-        section {
-            display: none;
-            padding: 20px;
-            text-align: left;
-            color: #ffffff; /* White text color */
+        #movies-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        h2 {
-            font-size: 24px;
+        #movie-content {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        #movie-content h2 {
             color: #f0b90b; /* Gold header text color */
-            margin-bottom: 15px;
             font-weight: bold;
+        }
+        #movie-content h3 {
+            color: #f0b90b; /* Gold header text color */
+            font-weight: bold;
+        }
+
+        #movie-content p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        #movie-content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         /* Bottom Navigation */
@@ -167,6 +184,10 @@
             h2 {
                 font-size: 20px;
             }
+
+            h3 {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -190,24 +211,61 @@
             <div id="learn-more-text" onclick="revealSections()">Learn more about Abel Gakuya <span id="arrow-icon">&#9654;</span></div>
         </div>
 
-        <section id="education">
-            <h2>Education</h2>
-            <!-- Add your education details here -->
-        </section>
+        <!-- Movies Section -->
+        <div id="movies-container">
+            <h2>Movies</h2>
+            <div id="movie-content">
+                <h3>The Cinematic Marvel of Oppenheimer</h3>
+                <p>
+                    Oppenheimer is a cinematic masterpiece that delves into the complex life of J. Robert Oppenheimer,
+                    the father of the atomic bomb. The film's narrative and cinematography are captivating, providing
+                    a profound glimpse into history and human nature.
+                </p>
+                <img src="oppenheimer_image.jpg" alt="Oppenheimer Movie">
+            </div>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <!-- Add information about your projects here -->
-        </section>
+            <div id="movie-content">
+                <h3>Interstellar: A Journey Through Time and Space</h3>
+                <p>
+                    Interstellar takes audiences on an epic journey through time and space, exploring the resilience
+                    of the human spirit. Christopher Nolan's visionary storytelling and Hans Zimmer's mesmerizing
+                    score make this film a transcendent experience.
+                </p>
+                <img src="interstellar_image.jpg" alt="Interstellar Movie">
+            </div>
 
-        <section id="work-experience">
-            <h2>Work Experience</h2>
-            <!-- Add information about your work experience here -->
-        </section>
+            <div id="movie-content">
+                <h3>Inception: Unraveling the Layers of Reality</h3>
+                <p>
+                    Inception is a mind-bending exploration of dreams and reality. The intricate plot, coupled with
+                    stunning visual effects, creates a cinematic experience that challenges the viewer's perception
+                    of what is real and imagined.
+                </p>
+                <img src="inception_image.jpg" alt="Inception Movie">
+            </div>
 
-        <!-- Additional sections as needed -->
+            <div id="movie-content">
+                <h3>Memento: A Unique Tale of Memory and Mystery</h3>
+                <p>
+                    Memento's non-linear narrative, coupled with its exploration of memory and identity, sets it apart
+                    as a cinematic gem. The film's structure, where scenes unravel backward, adds an extra layer of
+                    intrigue.
+                </p>
+                <img src="memento_image.jpg" alt="Memento Movie">
+            </div>
 
-        <!-- Add more sections as needed -->
+            <div id="movie-content">
+                <h3>The Dark Knight: A Masterpiece of Superhero Cinema</h3>
+                <p>
+                    The Dark Knight transcends the superhero genre, offering a dark and compelling narrative. Heath
+                    Ledger's portrayal of the Joker is iconic, contributing to the film's status as one of the greatest
+                    superhero movies ever made.
+                </p>
+                <img src="dark_knight_image.jpg" alt="The Dark Knight Movie">
+            </div>
+        </div>
+
+        <!-- Your existing scripts and closing tags here -->
     </div>
 
     <!-- Bottom Navigation -->
@@ -218,7 +276,7 @@
             <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="https://store.steampowered.com/" target="_blank"><i class="fab fa-steam"></i></a>
             <a href="https://github.com/AbelGakuya" target="_blank"><i class="fab fa-github"></i></a>
-
+        
         </div>
     </div>
 
