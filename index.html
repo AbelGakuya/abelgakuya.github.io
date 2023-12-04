@@ -75,7 +75,6 @@
         #learn-more-container {
             text-align: center;
             margin-top: 0px;
-            
             margin-bottom: 20px
         }
 
@@ -121,6 +120,13 @@
             font-size: 16px;
             line-height: 1.5;
             margin-bottom: 15px;
+        }
+
+        #movie-content p.special-text {
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+            color: #6e6e6e; /* Light gray text color */
         }
 
         #movie-content img {
@@ -179,6 +185,57 @@
             font-size: 20px;
         }
 
+        /* Updated styles for skills section */
+        #skills-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left; /* Align text to the left */
+            padding: 20px;
+            display: none; /* Initially hide the skills container */
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-title {
+            font-size: 16px;
+            
+            color: #fff; /* Gold text color */
+            margin-bottom: 5px;
+        }
+
+        .skill-icon {
+            color: #f0b90b; /* Gold color for skills icons */
+            margin-right: 5px;
+        }
+
+        .progress {
+            position: relative;
+            height: 5px; /* Decreased height by half */
+            margin-bottom: 10px;
+            background-color: #333; /* Dark background color for progress bar container */
+            border-radius: 5px; /* Add border-radius for a rounded appearance */
+        }
+
+        .progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0; /* Set initial width to 0 */
+            background-color: #58a6ff; /* Gold background color for progress bar */
+            border-radius: 5px; /* Match border-radius with container for consistency */
+        }
+
+        .percentage-text {
+            position: absolute;
+            top: -20px; /* Place the percentage text above the bar */
+            right: 10px;
+            color: #fff; /* White text color */
+        }
+
+
         /* Media queries for responsive design */
         @media (max-width: 768px) {
             #profile-info {
@@ -217,14 +274,13 @@
             h3 {
                 font-size: 18px;
             }
-
         }
     </style>
 </head>
 <body>
     <!-- Add new container for scrolling -->
     <div id="scroll-container">
-    <div id="profile-container">
+        <div id="profile-container">
             <div id="profile-info">
                 <img id="profile-picture" src="abel1.png" alt="Abel Gakuya">
                 <h1>Abel Gakuya</h1>
@@ -232,18 +288,76 @@
                 <p>Hello! I'm Abel Gakuya, a passionate Medical Doctor with a keen interest in technology. By day, I'm dedicated to the field of medicine, working to improve healthcare and make a positive impact on people's lives. Outside the clinic, I'm a versatile programmer, specializing in Android app development using Kotlin. I'm also on an exciting journey to master Python.</p>
                 <p>Join me as I explore the intersection of medicine and technology, creating innovative solutions and striving to make a difference. Let's connect and share our experiences!</p>
             </div>
-         </div>
+        </div>
 
         <div id="learn-more-container">
             <div id="learn-more-text" onclick="revealMovies()">Learn more about Abel Gakuya <span id="arrow-icon">&#9654;</span></div>
         </div>
     
 
+    <!-- Skills Section -->
+    <!-- Skills Section -->
+    <section id="skills-container">
+        <h2 style="color: #f0b90b;">Skills</h2>
+
+        <!-- Medical Doctor Skill -->
+        <div class="skill-item">
+            <div class="skill-title">
+                <i class="fas fa-stethoscope skill-icon"></i> Medical Doctor
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="percentage-text">95%</div>
+            </div>
+        </div>
+
+        <!-- Android Development Skill -->
+        <div class="skill-item">
+            <div class="skill-title">
+                <i class="fab fa-android skill-icon"></i> Android Development using Kotlin
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="percentage-text">90%</div>
+            </div>
+        </div>
+
+        <!-- Python Data Analysis Skill -->
+        <div class="skill-item">
+            <div class="skill-title">
+                <i class="fab fa-python skill-icon"></i> Python Data Analysis
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="percentage-text">85%</div>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <!-- ... (previous body content remains unchanged) ... -->
+
+    <!-- Script to set progress bar widths -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set progress bar widths based on percentage values
+            document.querySelectorAll('.progress-bar').forEach(function (progressBar) {
+                var percentage = progressBar.getAttribute('aria-valuenow');
+                progressBar.style.width = percentage + '%';
+            });
+        });
+
+        
+    </script>
+
+
     <!-- Movies Section -->
-        <div id="movies-container">
-            <h2>Movies</h2>
+    <section id="movies-container">
+        
+            <h2 style="color: #f0b90b;">Movies</h2>
             <div id="movie-content">
-                <h2>The Cinematic Marvel of Oppenheimer</h2>
+                <p class="special-text">The Cinematic Marvel of Oppenheimer</p>
                 <p>
                     Oppenheimer is a cinematic masterpiece that delves into the complex life of J. Robert Oppenheimer,
                     the father of the atomic bomb. The film's narrative and cinematography are captivating, providing
@@ -253,7 +367,7 @@
             </div>
 
             <div id="movie-content">
-                <h2>Interstellar: A Journey Through Time and Space</h2>
+                <p class="special-text">Interstellar: A Journey Through Time and Space</p>
                 <p>
                     Interstellar takes audiences on an epic journey through time and space, exploring the resilience
                     of the human spirit. Christopher Nolan's visionary storytelling and Hans Zimmer's mesmerizing
@@ -263,7 +377,7 @@
             </div>
 
             <div id="movie-content">
-                <h2>Inception: Unraveling the Layers of Reality</h2>
+                <p class="special-text">Inception: Unraveling the Layers of Reality</p>
                 <p>
                     Inception is a mind-bending exploration of dreams and reality. The intricate plot, coupled with
                     stunning visual effects, creates a cinematic experience that challenges the viewer's perception
@@ -273,7 +387,7 @@
             </div>
 
             <div id="movie-content">
-                <h2>Memento: A Unique Tale of Memory and Mystery</h2>
+                <p class="special-text">Memento: A Unique Tale of Memory and Mystery</p>
                 <p>
                     Memento's non-linear narrative, coupled with its exploration of memory and identity, sets it apart
                     as a cinematic gem. The film's structure, where scenes unravel backward, adds an extra layer of
@@ -283,7 +397,7 @@
             </div>
 
             <div id="movie-content">
-                <h2>The Dark Knight: A Masterpiece of Superhero Cinema</h2>
+                <p class="special-text">The Dark Knight: A Masterpiece of Superhero Cinema</p>
                 <p>
                     The Dark Knight transcends the superhero genre, offering a dark and compelling narrative. Heath
                     Ledger's portrayal of the Joker is iconic, contributing to the film's status as one of the greatest
@@ -291,10 +405,11 @@
                 </p>
                 <img src="dark_knight_image.jpg" alt="The Dark Knight Movie">
             </div>
-        </div>
+        
 
         <!-- Your existing scripts and closing tags here -->
-    </div>
+    
+</section>
 
     <!-- Bottom Navigation -->
     <div id="bottom-nav">
@@ -318,9 +433,11 @@
         function revealMovies() {
             var moviesContainer = document.getElementById("movies-container");
             var learnMoreContainer = document.getElementById("learn-more-container");
+            var skillsContainer = document.getElementById("skills-container");
 
             moviesContainer.style.display = "block";
             learnMoreContainer.style.display = "none";
+            skillsContainer.style.display = "block";
         }
     </script>
 </body>
