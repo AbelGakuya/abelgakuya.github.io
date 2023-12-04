@@ -130,6 +130,7 @@
         /* Bottom Navigation */
         #bottom-nav {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 10px;
@@ -138,6 +139,30 @@
             width: 100%;
             background-color: #121212; /* Dark background color for bottom nav */
             z-index: 1;
+        }
+
+        #contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #contact-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #58a6ff; /* White text color */
+            display: flex;
+            align-items: center; /* Align icon and text vertically */
+        }
+
+        #contact-info i {
+            margin-right: 5px;
+            color: #58a6ff; /* White icon color */
+        }
+
+        #contact-info p:not(:last-child) {
+            margin-right: 15px; /* Add space between email and telephone */
         }
 
         #social-links {
@@ -271,10 +296,16 @@
 
     <!-- Bottom Navigation -->
     <div id="bottom-nav">
+
+        <div id="contact-info">
+            <p><i class="fas fa-envelope"></i>abelgakuya@gmail.com </p>
+            <p><i class="fas fa-phone-alt"></i> +254701439136</p>
+        </div>
+
         <div id="social-links">
             <a href="https://www.linkedin.com/in/dr-abel-gakuya-68bb0b18b/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/mwangi_abel/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/mwangi_gakuyaa" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://twitter.com/mwangi_gakuyaa" target="_blank"><i class="fab fa-twitter" ></i></a>
             <a href="https://store.steampowered.com/" target="_blank"><i class="fab fa-steam"></i></a>
             <a href="https://github.com/AbelGakuya" target="_blank"><i class="fab fa-github"></i></a>
         
