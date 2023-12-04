@@ -95,6 +95,94 @@
             margin-left: 5px;
         }
 
+        /* Updated styles for skills section */
+        #skills-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left; /* Align text to the left */
+            padding: 20px;
+            display: none; /* Initially hide the skills container */
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-title {
+            font-size: 12px;
+            color: #fff; /* Gold text color */
+            margin-bottom: 5px;
+        }
+
+        .skill-icon {
+            color: #f0b90b; /* Gold color for skills icons */
+            margin-right: 5px;
+        }
+
+        .progress {
+            position: relative;
+            height: 5px; /* Decreased height by half */
+            margin-bottom: 10px;
+            background-color: #333; /* Dark background color for progress bar container */
+            border-radius: 5px; /* Add border-radius for a rounded appearance */
+        }
+
+        .progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0; /* Set initial width to 0 */
+            background-color: #58a6ff; /* Gold background color for progress bar */
+            border-radius: 5px; /* Match border-radius with container for consistency */
+        }
+
+        .percentage-text {
+            position: absolute;
+            top: -20px; /* Place the percentage text above the bar */
+            right: 10px;
+            font-size: 12px;
+            color: #fff; /* White text color */
+        }
+
+
+        /* Updated styles for projects section */
+        #projects-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left; /* Align text to the left */
+            padding: 20px;
+            display: none; /* Initially hide the projects container */
+        }
+
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+            color: #6e6e6e;  /* Gold text color */
+            margin-bottom: 5px;
+        }
+
+        
+
+        .project-description {
+            color: #fff; /* White text color */
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .download-link {
+            color: #58a6ff; /* Gold text color for download link */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+
         #movies-container {
             max-width: 800px;
             margin: 0 auto;
@@ -185,56 +273,7 @@
             font-size: 20px;
         }
 
-        /* Updated styles for skills section */
-        #skills-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left; /* Align text to the left */
-            padding: 20px;
-            display: none; /* Initially hide the skills container */
-        }
-
-        .skill-item {
-            margin-bottom: 20px;
-        }
-
-        .skill-title {
-            font-size: 12px;
-            color: #fff; /* Gold text color */
-            margin-bottom: 5px;
-        }
-
-        .skill-icon {
-            color: #f0b90b; /* Gold color for skills icons */
-            margin-right: 5px;
-        }
-
-        .progress {
-            position: relative;
-            height: 5px; /* Decreased height by half */
-            margin-bottom: 10px;
-            background-color: #333; /* Dark background color for progress bar container */
-            border-radius: 5px; /* Add border-radius for a rounded appearance */
-        }
-
-        .progress-bar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 0; /* Set initial width to 0 */
-            background-color: #58a6ff; /* Gold background color for progress bar */
-            border-radius: 5px; /* Match border-radius with container for consistency */
-        }
-
-        .percentage-text {
-            position: absolute;
-            top: -20px; /* Place the percentage text above the bar */
-            right: 10px;
-            font-size: 12px;
-            color: #fff; /* White text color */
-        }
-
+        
 
         /* Media queries for responsive design */
         @media (max-width: 768px) {
@@ -333,7 +372,7 @@
             </div>
         </div>
 
-        <a href="https://github.com/AbelGakuya/abelgakuya.github.io/releases/download/v1.0.0/app-debug.apk" download>Download Your App</a>
+        
 
         
     </section>
@@ -353,6 +392,34 @@
         
     </script>
 
+
+    <!-- Projects Section -->
+    <section id="projects-container">
+        <h2 style="color: #f0b90b;">Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project-item">
+            <div class="project-title">Run App</div>
+            <div class="project-description">Track your runs with precision using Run app! Whether you're a seasoned athlete or just starting your fitness journey, 
+                this app provides a comprehensive solution for monitoring your running activities. With real-time GPS tracking on Google Maps, you can visualize your path, record total distance covered, monitor average speed, and estimate total calories burned.</div>
+            <a href="https://github.com/AbelGakuya/abelgakuya.github.io/releases/download/v1.0.0/app-debug.apk" class="download-link">Download Run</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-item">
+            <div class="project-title">Afya Locum App</div>
+            <div class="project-description">Afya Locum is a premier platform that connects hospitals with healthcare professionals seamlessly. 
+                This app revolutionizes the way locum opportunities are managed, making it easier for hospitals to post available locums and for healthcare workers to find and apply for positions that match their expertise.</div>
+            <a href="https://github.com/AbelGakuya/abelgakuya.github.io/releases/download/v2.0.0/app-release.apk" class="download-link">Download AfyaLocum</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-item">
+            <div class="project-title">Project Title 3</div>
+            <div class="project-description">Short description of Project 3.</div>
+            <a href="project3_download_link" class="download-link">Download Project 3</a>
+        </div>
+    </section>
 
     <!-- Movies Section -->
     <section id="movies-container">
@@ -436,10 +503,12 @@
             var moviesContainer = document.getElementById("movies-container");
             var learnMoreContainer = document.getElementById("learn-more-container");
             var skillsContainer = document.getElementById("skills-container");
+            var projectsContainer = document.getElementById("projects-container");
 
             moviesContainer.style.display = "block";
             learnMoreContainer.style.display = "none";
             skillsContainer.style.display = "block";
+            projectsContainer.style.display = "block";
         }
     </script>
 </body>
