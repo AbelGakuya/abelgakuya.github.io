@@ -223,25 +223,19 @@
             margin-bottom: 20px;
         }
 
-        /* Footer styles */
-        footer {
-            background-color: #333; /* Dark background color for the footer */
-            color: #fff; /* White text color */
-            text-align: center;
+       /* Updated styles for socials section */
+       #socials-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center; /* Center text within the container */
             padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            display: none; /* Initially hide the socials container */
         }
 
-        .contact-info {
-            margin-bottom: 10px;
-        }
-
-        .social-icons {
-            font-size: 24px;
-            margin: 0 10px;
-            color: #f0b90b; /* Gold color for social icons */
+        .social-icon {
+            font-size: 20px;
+            margin: 10px;
+            color: #58a6ff; /* Gold color for social icons */
             text-decoration: none;
         }
 
@@ -457,22 +451,24 @@
 </section>
 
     <!-- Bottom Navigation -->
-    <footer>
+    <section id="socials-container">
+        <h2 style="color: #f0b90b;">Socials</h2>
 
-        <div class="contact-info">
-            <p><i class="fas fa-envelope"></i>abelgakuya@gmail.com </p>
-            <p><i class="fas fa-phone-alt"></i> +254701439136</p>
-        </div>
-
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/dr-abel-gakuya-68bb0b18b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/mwangi_abel/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/mwangi_gakuyaa" target="_blank"><i class="fab fa-twitter" ></i></a>
-            <a href="https://steamcommunity.com/profiles/76561199494723403/" target="_blank"><i class="fab fa-steam"></i></a>
-            <a href="https://github.com/AbelGakuya" target="_blank"><i class="fab fa-github"></i></a>
         
-        </div>
-    </footer>
+
+        <!-- Social Links -->
+        <a href="https://www.linkedin.com/in/dr-abel-gakuya-68bb0b18b/" target="_blank" class="social-icon fab fa-linkedin"></a>
+        <a href="https://www.instagram.com/mwangi_abel/" target="_blank" class="social-icon fab fa-instagram"></a>
+        <a href="https://twitter.com/mwangi_gakuyaa" target="_blank" class="social-icon fab fa-twitter"></a>
+        <a href="https://steamcommunity.com/profiles/76561199494723403/" target="_blank" class="social-icon fab fa-steam"></a>
+        <a href="https://github.com/AbelGakuya" target="_blank" class="social-icon fab fa-github"></a>
+
+        <!-- Email Icon -->
+        <a href="mailto:abelgakuya@gmail.com" class="social-icon far fa-envelope"></a>
+
+        <!-- Telephone Icon -->
+        <a href="tel:+254701439136" class="social-icon fas fa-phone"></a>
+    </section>
 
     <script>
         function revealMovies() {
@@ -480,11 +476,13 @@
             var learnMoreContainer = document.getElementById("learn-more-container");
             var skillsContainer = document.getElementById("skills-container");
             var projectsContainer = document.getElementById("projects-container");
+            var socialsContainer = document.getElementById("socials-container")
 
             moviesContainer.style.display = "block";
             learnMoreContainer.style.display = "none";
             skillsContainer.style.display = "block";
             projectsContainer.style.display = "block";
+            socialsContainer.style.display = "block";
         }
     </script>
 </body>
