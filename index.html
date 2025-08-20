@@ -1,20 +1,18 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abel Gakuya - Personal Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Font Awesome CSS -->
+
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #e0e0e0; /* Light gray text color */
-            background-color: #121212; /* Dark background color */
-            overflow-x: hidden; /* Hide horizontal scrollbar */
-            
+            color: #e0e0e0;
+            background-color: #121212;
+            overflow-x: hidden;
         }
 
         #profile-image {
@@ -25,31 +23,30 @@
 
         #scroll-container {
             min-height: 100vh;
-            max-height: calc(100vh - 60px); /* Adjusted for bottom navigation */
+            max-height: calc(100vh - 60px);
             overflow-y: auto;
             overflow-x: hidden;
         }
-
 
         #profile-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: #ffffff; /* White text color */
+            color: #ffffff;
             padding: 10px;
             text-align: center;
-            background-color: #121212; /* Dark background color for profile container */
+            background-color: #121212;
         }
 
         #profile-info {
-            max-width: 80%; /* Adjust the width as needed */
+            max-width: 80%;
             margin-bottom: 20px;
         }
 
         #profile-info h1 {
             font-size: 32px;
             margin-bottom: 10px;
-            color: #f0b90b; /* Gold header text color */
+            color: #f0b90b;
             font-weight: bold;
         }
 
@@ -63,98 +60,104 @@
             font-size: 20px;
             font-weight: bold;
             font-style: italic;
-            color: #6e6e6e; /* Light gray text color */
+            color: #6e6e6e;
         }
 
         #profile-picture {
             border-radius: 50%;
-            width: 150px; /* Adjust the size as needed */
-            height: 150px; /* Adjust the size as needed */
-            max-width: 100%; /* Set a maximum width to prevent image distortion */
-            border: 4px solid #ffffff; /* White border around the profile picture */
+            width: 150px;
+            height: 150px;
+            max-width: 100%;
+            border: 4px solid #ffffff;
         }
 
         #learn-more-container {
             text-align: center;
-            margin-top: 0px;
-            margin-bottom: 20px
+            margin-top: 0;
+            margin-bottom: 20px;
         }
 
         #learn-more-text {
             font-size: 16px;
-            color: #58a6ff; /* Set Learn more text color to light blue */
+            color: #58a6ff;
             cursor: pointer;
             font-weight: bold;
-            background-color: #121212; /* Dark background color for the "Learn more" container */
+            background-color: #121212;
             display: inline-block;
-            padding: 5px;
+            padding: 5px 8px;
             border-radius: 5px;
         }
 
         #arrow-icon {
             font-size: 20px;
-            color: #58a6ff; /* Set arrow color to light blue */
+            color: #58a6ff;
             margin-left: 5px;
         }
 
-        /* Updated styles for skills section */
+        /* Skills */
         #skills-container {
             max-width: 800px;
             margin: 0 auto;
-            text-align: left; /* Align text to the left */
+            text-align: left;
             padding: 20px;
-            display: none; /* Initially hide the skills container */
+            display: none;
         }
 
-        .skill-item {
-            margin-bottom: 20px;
-        }
-
+        .skill-item { margin-bottom: 30px; }
         .skill-title {
             font-size: 12px;
-            color: #fff; /* Gold text color */
+            color: #fff;
             margin-bottom: 5px;
         }
-
         .skill-icon {
-            color: #f0b90b; /* Gold color for skills icons */
+            color: #f0b90b; /* gold icons */
             margin-right: 5px;
         }
 
         .progress {
             position: relative;
-            height: 5px; /* Decreased height by half */
-            margin-bottom: 10px;
-            background-color: #333; /* Dark background color for progress bar container */
-            border-radius: 5px; /* Add border-radius for a rounded appearance */
+            height: 8px;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
         }
-
         .progress-bar {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             height: 100%;
-            width: 0; /* Set initial width to 0 */
-            background-color: #58a6ff; /* Gold background color for progress bar */
-            border-radius: 5px; /* Match border-radius with container for consistency */
+            width: 0;
+            background-color: #58a6ff;
+            border-radius: 5px;
+            transition: width 0.3s ease;
         }
-
+        /* Percentage above bar */
         .percentage-text {
             position: absolute;
-            top: -20px; /* Place the percentage text above the bar */
-            right: 10px;
+            top: -20px; /* above bar */
             font-size: 12px;
-            color: #fff; /* White text color */
+            color: #fff;
+            white-space: nowrap;
         }
 
-
-        /* Updated styles for projects section */
+        /* Projects */
         #projects-container {
             max-width: 800px;
             margin: 0 auto;
-            text-align: left; /* Align text to the left */
+            text-align: left;
             padding: 20px;
-            display: none; /* Initially hide the projects container */
+            display: none;
+        }
+
+        .project-section {
+            margin-bottom: 40px;
+        }
+
+        .project-section h3 {
+            color: #f0b90b;
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 6px;
         }
 
         .project-item {
@@ -165,128 +168,78 @@
             font-size: 20px;
             font-weight: bold;
             font-style: italic;
-            color: #6e6e6e;  /* Gold text color */
-            margin-bottom: 5px;
+            color: #6e6e6e;
+            margin-bottom: 8px;
         }
 
-        
-
         .project-description {
-            color: #fff; /* White text color */
-            margin-bottom: 10px;
+            color: #fff;
+            margin-bottom: 12px;
             font-size: 14px;
         }
 
         .download-link {
-            color: #58a6ff; /* Gold text color for download link */
+            color: #58a6ff;
             text-decoration: none;
             font-weight: bold;
             font-size: 14px;
         }
 
+        /* Project cards + animation */
+        .card {
+            background-color: #1c1c1c;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s ease;
+            opacity: 0;
+            transform: translateY(26px);
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(240,185,11,0.25);
+        }
+        .fade-in { animation: fadeInUp 0.8s ease forwards; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(26px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        /* Staggered appearance within each section */
+        .project-section .card:nth-of-type(1) { animation-delay: 0.05s; }
+        .project-section .card:nth-of-type(2) { animation-delay: 0.15s; }
+        .project-section .card:nth-of-type(3) { animation-delay: 0.25s; }
+        .project-section .card:nth-of-type(4) { animation-delay: 0.35s; }
 
-        #movies-container {
+        /* Socials — keep original look, fix spacing above */
+        #socials-container {
             max-width: 800px;
-            margin: 0 auto;
-            display: none; /* Hide initially */
-            padding: 10px;
-        }
-
-        #movie-content {
-            text-align: left;
-            margin-bottom: 30px;
-        }
-
-        #movie-content h2 {
-            color: #f0b90b; /* Gold header text color */
-            font-weight: bold;
-        }
-
-        #movie-content h3 {
-            color: #f0b90b; /* Gold header text color */
-            font-weight: bold;
-        }
-        #movie-content p {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        #movie-content p.special-text {
-            font-size: 20px;
-            font-weight: bold;
-            font-style: italic;
-            color: #6e6e6e; /* Light gray text color */
-        }
-
-        #movie-content img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-       /* Updated styles for socials section */
-       #socials-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center; /* Center text within the container */
+            margin: 10px auto 0; /* tightened gap above socials */
+            text-align: center;
             padding: 20px;
-            display: none; /* Initially hide the socials container */
+            display: none;
         }
-
         .social-icon {
             font-size: 20px;
             margin: 10px;
-            color: #58a6ff; /* Gold color for social icons */
+            color: #58a6ff;
             text-decoration: none;
         }
 
-
-        
-
-        /* Media queries for responsive design */
+        /* Responsive */
         @media (max-width: 768px) {
-            #profile-info {
-                max-width: 100%;
-            }
-
-            #profile-info h1 {
-                font-size: 28px;
-            }
-
-            #profile-info p {
-                font-size: 16px;
-            }
-
-            #profile-info p.special-text {
-                font-size: 18px;
-            }
-
-            #profile-picture {
-                width: 120px;
-                height: 120px;
-            }
-
-            #learn-more-text {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 10px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            h3 {
-                font-size: 18px;
-            }
+            #profile-info { max-width: 100%; }
+            #profile-info h1 { font-size: 28px; }
+            #profile-info p { font-size: 16px; }
+            #profile-info p.special-text { font-size: 18px; }
+            #profile-picture { width: 120px; height: 120px; }
+            #learn-more-text { font-size: 16px; }
+            section { padding: 10px; }
+            h2 { font-size: 20px; }
+            h3 { font-size: 18px; }
         }
     </style>
 </head>
 <body>
-    <!-- Add new container for scrolling -->
     <div id="scroll-container">
         <div id="profile-container">
             <div id="profile-info">
@@ -301,9 +254,7 @@
         <div id="learn-more-container">
             <div id="learn-more-text" onclick="revealMovies()">Learn more about Abel Gakuya <span id="arrow-icon">&#9654;</span></div>
         </div>
-    
 
-        <!-- Skills Section -->
         <!-- Skills Section -->
         <section id="skills-container">
             <h2 style="color: #f0b90b;">Skills</h2>
@@ -314,8 +265,8 @@
                     <i class="fas fa-stethoscope skill-icon"></i> Medical Doctor
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="percentage-text">95%</div>
+                    <div class="progress-bar" data-percent="95"></div>
+                    <div class="percentage-text">0%</div>
                 </div>
             </div>
 
@@ -325,173 +276,108 @@
                     <i class="fab fa-android skill-icon"></i> Android Development using Kotlin
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="percentage-text">90%</div>
+                    <div class="progress-bar" data-percent="90"></div>
+                    <div class="percentage-text">0%</div>
                 </div>
             </div>
 
-            <!-- Python Data Analysis Skill -->
+            <!-- Python & R Data Analysis Skill -->
             <div class="skill-item">
                 <div class="skill-title">
                     <i class="fab fa-python skill-icon"></i> Data Analysis using python and R
                 </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="percentage-text">85%</div>
+                    <div class="progress-bar" data-percent="85"></div>
+                    <div class="percentage-text">0%</div>
                 </div>
             </div>
-
-        
-
-        
         </section>
-
-       
-
-        <!-- Script to set progress bar widths -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Set progress bar widths based on percentage values
-                document.querySelectorAll('.progress-bar').forEach(function (progressBar) {
-                    var percentage = progressBar.getAttribute('aria-valuenow');
-                    progressBar.style.width = percentage + '%';
-                });
-            });
-
-            
-        </script>
-
 
         <!-- Projects Section -->
         <section id="projects-container">
             <h2 style="color: #f0b90b;">Projects</h2>
+            <!-- (kept exactly as you pasted it) -->
+            <!-- Tech Projects -->
+            <div class="project-section">
+                <h3>📱 Tech Projects</h3>
+                <!-- Project: Calorica App -->
+                    <div class="project-item card fade-in">
+                    <div class="project-title">Calorica App</div>
+                    <div class="project-description">
+                        Calorica is a smart nutrition companion designed to simplify healthy living. By answering a few quick lifestyle questions, you’ll get a personalized plan tailored to your goals. Simply snap a photo of your meal and instantly receive a full nutritional breakdown, helping you stay aware and confident about your food choices. Calorica makes nutrition tracking effortless — giving you the fastest, easiest path to progress without the clutter of traditional diet apps.<br><br>
+                        <strong>Note:</strong> Currently available only on iOS.
+                    </div>
+                    <a href="https://apps.apple.com/ke/app/calorica-calorie-tracker/id6746068250" class="download-link">Download on App Store</a>
+                    </div>
 
-        
-
-            <!-- Project 1 -->
-            <div class="project-item">
-                <div class="project-title">Afya Locum App</div>
-                <div class="project-description">Afya Locum is a premier platform that connects hospitals with healthcare professionals seamlessly. 
-                    This app revolutionizes the way locum opportunities are managed, making it easier for hospitals to post available locums and for healthcare workers to find and apply for positions that match their expertise.</div>
-                <a href="https://github.com/AbelGakuya/abelgakuya.github.io/releases/download/v2.0.1/app-release.apk" class="download-link">Download AfyaLocum</a>
+                <div class="project-item card fade-in">
+                    <div class="project-title">Uchuuzi App</div>
+                    <div class="project-description">An app where farmers can list their farm produce with details such as price, location, contacts, and images. Buyers can view the products and contact the farmers to request purchase.</div>
+                    <a href="https://github.com/AbelGakuya/abelgakuya.github.io/releases/download/v3.2.0/app-release.apk" class="download-link">Download Uchuuzi</a>
+                </div>  
+                <div class="project-item card fade-in">
+                    <div class="project-title">Run App</div>
+                    <div class="project-description">Track your runs with precision using Run app! Whether you're a seasoned athlete or just starting your fitness journey, this app provides a comprehensive solution for monitoring your running activities. With real-time GPS tracking on Google Maps, you can visualize your path, record total distance covered, monitor average speed, and estimate total calories burned.</div>
+                    <a href="https://github.com/AbelGakuya/abelgakuya.github.io/releases/download/v1.0.0/app-debug.apk" class="download-link">Download Run</a>
+                </div>
             </div>
-
-            <!-- Project 2 -->
-            <div class="project-item">
-                <div class="project-title">Uchuuzi App</div>
-                <div class="project-description">An app where farmers can list their farm produce with details such as price, location, contacts, and images.
-                    Buyers can view the products and contact the farmers to request purchase.</div>
-                <a href="https://github.com/AbelGakuya/abelgakuya.github.io/releases/download/v3.2.0/app-release.apk" class="download-link">Download Uchuuzi</a>
-            </div>  
-
-            <!-- Project 3 -->
-            <div class="project-item">
-                <div class="project-title">Run App</div>
-                <div class="project-description">Track your runs with precision using Run app! Whether you're a seasoned athlete or just starting your fitness journey, 
-                    this app provides a comprehensive solution for monitoring your running activities. 
-                    With real-time GPS tracking on Google Maps, you can visualize your path, record total distance covered, 
-                    monitor average speed, and estimate total calories burned.</div>
-                <a href="https://github.com/AbelGakuya/abelgakuya.github.io/releases/download/v1.0.0/app-debug.apk" class="download-link">Download Run</a>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-item">
-                <div class="project-title">CEMA</div>
-                <div class="project-description">Research Description:<br>
-                    My research focused on analyzing a dataset containing monthly data for children under 5 years old, disaggregated at a county level, 
-                    spanning from January 2021 to June 2023. The dataset encompassed various key variables, including the total number of dewormed children, cases of acute malnutrition, 
-                    stunting across different age groups, cases of diarrhea, and underweight children.<br><br>
-                    
-                    Research Question:<br>
-                    I aimed to address the following question through exploratory data analysis:<br> 
-                    What are the trends and patterns in child health indicators across Kenyan counties from January 2021 to June 2023?<br><br>
-
-                    The analysis, conducted using the R programming language, was encapsulated in an R Markdown script. 
-                    Upon knitting this script, an HTML output containing comprehensive results was generated.<br><br>
-                    To explore the insights derived from this analysis, I invite you to view the detailed results.</div>
-
+            <!-- Medical Research -->
+            <div class="project-section">
+                <h3>🧑‍⚕️ Medical Research</h3>
+                <div class="project-item card fade-in">
+                    <div class="project-title">CEMA</div>
+                    <div class="project-description">Research Description:<br> My research focused on analyzing a dataset containing monthly data for children under 5 years old, disaggregated at a county level, spanning from January 2021 to June 2023. The dataset encompassed various key variables, including the total number of dewormed children, cases of acute malnutrition, stunting across different age groups, cases of diarrhea, and underweight children.<br><br> Research Question:<br> I aimed to address the following question through exploratory data analysis:<br> What are the trends and patterns in child health indicators across Kenyan counties from January 2021 to June 2023?<br><br> The analysis, conducted using the R programming language, was encapsulated in an R Markdown script. Upon knitting this script, an HTML output containing comprehensive results was generated.<br><br> To explore the insights derived from this analysis, I invite you to view the detailed results.</div>
                     <a href="https://abelgakuya.github.io/AbelMwangiGakuya.html" class="download-link">Check Results</a>
-
-            </div>
-
-            <!-- Project 5 -->
-            <div class="project-item">
-                <div class="project-title">HEPI</div>
-                <div class="project-description">Research on Cerebral Palsy Hospitalizations at Kenyatta National Hospital<br><br>
-                    
-
-                        Background:<br>
-                        Cerebral palsy (CP) is a debilitating disease often accompanied by multiple comorbidities, leading to frequent and costly hospitalizations.<br><br>
-
-                        Objectives:<br>
-                        Our study aimed to characterize acute causes of hospitalization, costs, length of stay, 
-                        and associated chronic comorbidities among children aged 2-13 years living with cerebral palsy admitted at Kenyatta National Hospital (KNH).<br><br>
-
-                        Methods:<br>
-                        We conducted a retrospective cross-sectional study, analyzing 164 medical files of children with CP admitted at KNH from January 2017 to December 2021. 
-                        Data on sociodemographic characteristics, acute admission diagnoses, chronic comorbidities, admission costs, payment methods, and length of stay were extracted. 
-                        Python programming language was utilized for data analysis.<br><br>
-
-                        Results:<br>
-                        The majority of children were urban dwellers (82%) with working primary caregivers (80%). 
-                        Common acute admission diagnoses included convulsions (50%) and pneumonia (34%). 
-                        Chronic comorbidities included respiratory issues (32%), feeding difficulties (32%), seizure disorders (28%), metabolic disorders (23%), and malnutrition (20%). 
-                        The average in-hospital stay was 16.7 days, with a median cost of Ksh 46,161. Most costs were covered by NHIF (71%), 
-                        with some families paying out-of-pocket, especially during initial admissions.<br><br>
-
-                        Conclusion:<br>
-                        Seizure and respiratory disorders significantly contribute to both acute and chronic morbidity among children with CP, 
-                        with feeding difficulties and malnutrition exacerbating their conditions. Prolonged hospital stays also escalate costs. 
-                        Our findings emphasize the importance of assessing children with CP for seizure control, feeding issues, and nutritional status.
-                        Additionally, caregivers should receive education on NHIF insurance during outpatient care.<br><br>
-
-                        To explore the full details of our research findings, we invite you to read the complete manuscript from the link below
-
-                
-            </div>
-
-                <a href="https://abelgakuya.github.io/hepi.htm" class="download-link">Check Manuscript</a>
+                </div>
+                <div class="project-item card fade-in">
+                    <div class="project-title">HEPI</div>
+                    <div class="project-description">Research on Cerebral Palsy Hospitalizations at Kenyatta National Hospital<br><br> Background:<br> Cerebral palsy (CP) is a debilitating disease often accompanied by multiple comorbidities, leading to frequent and costly hospitalizations.<br><br> Objectives:<br> Our study aimed to characterize acute causes of hospitalization, costs, length of stay, and associated chronic comorbidities among children aged 2-13 years living with cerebral palsy admitted at Kenyatta National Hospital (KNH).<br><br> Methods:<br> We conducted a retrospective cross-sectional study, analyzing 164 medical files of children with CP admitted at KNH from January 2017 to December 2021. Data on sociodemographic characteristics, acute admission diagnoses, chronic comorbidities, admission costs, payment methods, and length of stay were extracted. Python programming language was utilized for data analysis.<br><br> Results:<br> The majority of children were urban dwellers (82%) with working primary caregivers (80%). Common acute admission diagnoses included convulsions (50%) and pneumonia (34%). Chronic comorbidities included respiratory issues (32%), feeding difficulties (32%), seizure disorders (28%), metabolic disorders (23%), and malnutrition (20%). The average in-hospital stay was 16.7 days, with a median cost of Ksh 46,161. Most costs were covered by NHIF (71%), with some families paying out-of-pocket, especially during initial admissions.<br><br> Conclusion:<br> Seizure and respiratory disorders significantly contribute to both acute and chronic morbidity among children with CP, with feeding difficulties and malnutrition exacerbating their conditions. Prolonged hospital stays also escalate costs. Our findings emphasize the importance of assessing children with CP for seizure control, feeding issues, and nutritional status. Additionally, caregivers should receive education on NHIF insurance during outpatient care.<br><br> To explore the full details of our research findings, we invite you to read the complete manuscript from the link below</div>
+                    <a href="https://abelgakuya.github.io/hepi.htm" class="download-link">Check Manuscript</a>
+                </div>
             </div>
         </section>
 
-        
-
-    
+        <!-- Socials Section -->
         <section id="socials-container">
             <h2 style="color: #f0b90b;">Socials</h2>
-
-        
-
-            <!-- Social Links -->
             <a href="https://www.linkedin.com/in/dr-abel-gakuya-68bb0b18b/" target="_blank" class="social-icon fab fa-linkedin"></a>
             <a href="https://www.instagram.com/mwangi_abel/" target="_blank" class="social-icon fab fa-instagram"></a>
             <a href="https://twitter.com/dr_gaks" target="_blank" class="social-icon fab fa-x"></a>
             <a href="https://steamcommunity.com/profiles/76561199494723403/" target="_blank" class="social-icon fab fa-steam"></a>
             <a href="https://github.com/AbelGakuya" target="_blank" class="social-icon fab fa-github"></a>
-
-            <!-- Email Icon -->
             <a href="mailto:abelgakuya@gmail.com" class="social-icon far fa-envelope"></a>
-
-            <!-- Telephone Icon -->
             <a href="tel:+254701439136" class="social-icon fas fa-phone"></a>
-       </section>
-
-        <script>
-            function revealMovies() {
-               // var moviesContainer = document.getElementById("movies-container");
-                var learnMoreContainer = document.getElementById("learn-more-container");
-                var skillsContainer = document.getElementById("skills-container");
-                var projectsContainer = document.getElementById("projects-container");
-                var socialsContainer = document.getElementById("socials-container")
-
-                //moviesContainer.style.display = "block";
-                learnMoreContainer.style.display = "none";
-                skillsContainer.style.display = "block";
-                projectsContainer.style.display = "block";
-                socialsContainer.style.display = "block";
-            }
-        </script>
-
+        </section>
     </div>
+
+    <script>
+        // Animate skills
+        function animateSkills() {
+            document.querySelectorAll('.skill-item').forEach(skill => {
+                let bar = skill.querySelector('.progress-bar');
+                let percentText = skill.querySelector('.percentage-text');
+                let target = parseInt(bar.getAttribute('data-percent'));
+                let current = 0;
+                let interval = setInterval(() => {
+                    if (current >= target) {
+                        clearInterval(interval);
+                    } else {
+                        current++;
+                        bar.style.width = current + "%";
+                        percentText.textContent = current + "%";
+                        percentText.style.left = current + "%";
+                    }
+                }, 20);
+            });
+        }
+
+        function revealMovies() {
+            document.getElementById("learn-more-container").style.display = "none";
+            document.getElementById("skills-container").style.display = "block";
+            document.getElementById("projects-container").style.display = "block";
+            document.getElementById("socials-container").style.display = "block";
+            animateSkills();
+        }
+    </script>
 </body>
 </html>
