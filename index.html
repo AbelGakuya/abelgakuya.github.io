@@ -211,13 +211,24 @@
         .project-section .card:nth-of-type(4) { animation-delay: 0.35s; }
 
         /* Socials — keep original look, fix spacing above */
-        #socials-container {
+       /* #socials-container {
             max-width: 800px;
-            margin: 10px auto 0; /* tightened gap above socials */
+            margin: 10px auto 0; /* tightened gap above socials 
             text-align: center;
             padding: 20px;
             display: none;
-        }
+        } */
+
+        /* Socials — adjusted spacing */
+#socials-container {
+    max-width: 800px;
+    margin: 0 auto; /* removes large top margin */
+    text-align: center;
+    padding: 10px 20px 30px; /* top | sides | bottom */
+    display: none;
+}
+
+
         .social-icon {
             font-size: 20px;
             margin: 10px;
